@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>Главная страница</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="header">
+	<div class="container">
+
+		<div class="header-header">
+			<div class="row">
+				<div class="col-lg-2 col-lg-offset-0"><a class="header-logo" href="index.html">LETEVENT</a></div>
+				<div class="col-lg-2 offset-lg-8"><button class="header-entrance" type="submit">Войти</button><a href="#"><img class="header-profile-logo" src="img/logo/user.png" alt="Аватарка"></a></div>
+			</div>
+		</div>
+
+		<div class="header-menu">
+			<div class="row">
+				<div class="col-lg-2 offset-lg-2">
+					<a href="#">Главная</a>
+				</div>
+				<div class="col-lg-2">
+					<a href="#">Локации</a>
+				</div>
+				<div class="col-lg-2">
+					<a href="#">Наша команда</a>
+				</div>
+				<div class="col-lg-2">
+					<a href="#">Отзывы</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container">
+		<div class="background">
+			<img class="content-bcg" src="img/bcg 1.png" alt="Задний фон" />
+			<h2 class="content-text">На этом сайте вы найдете площадки для всех случаев жизни по приемлемым ценам в городе Казань</h2>
+		</div>
+	</div>
+</div>
+
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<a href="tel: +79370099674">+7 (937) 009-96-74</a>
+			</div>
+			<div class="col-lg-4 offset-lg-1">
+				<span>
+					Адрес: г. Казань, ул. Есенина, д.117, 5 корпус
+				</span>
+			</div>
+			<div class="col-lg-3 offset-lg-1">
+				<span>
+					Автор идеи: © Ильвир <br>
+					Все права защищены
+				</span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4">
+				<a href="mailto:ilvir.nasibullin.2017@mail.ru">ilvir.nasibullin.2017@mail.ru</a>
+			</div>
+			<div class="col-lg-2 social_network">
+				<a href="https://vk.com/nasibullin7" target="_blank">Я в ВКонтакте</a> <br>
+				<a href="https://twitter.com/rTiqUMpypEWUMQu" target="_blank">Я в Твиттере</a>
+			</div>
+			<div class="col-lg-2 social_network">
+				<a href="https://www.facebook.com/profile.php?id=100019816771740" target="_blank">Я в Фэйсбуке</a> <br>
+				<a href="https://www.instagram.com/nasibullin7/" target="_blank">Я в Инстаграмме</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Модальные окна -->
+<!-- Вход -->
+<div class="popup">
+	<div class="popup-dialog">
+		<div class="popup-content">
+			<button class="popup-close">&times;</button>
+			<h4 class="popup-header">
+				Авторизуйтесь
+			</h4>
+			<div class="popup-form">
+				<form action="#">
+					<label for="#">Ваш логин</label>
+					<input class="form-input" type="text" >
+					<label for="#">Ваш пароль</label>
+					<input class="form-input" type="text" >
+					<button class="form-btn button" type="submit">Войти</button>
+					<small>Нет аккаунта? <a href="#">Зарегестрируйтесь</a></small>
+				</form>
+			</div>
+
+		</div>		
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+	    		$('.header-entrance, .header-profile-logo').on('click', function(event){
+	    			event.preventDefault();
+	    			$('.popup').fadeIn();
+	    		});
+	    		$('.popup-close').on('click', function(event) {
+	    			event.preventDefault();
+	    			$('.popup').fadeOut(); 
+	    		});
+
+	    	});
+</script>
+</body>
+</html>
