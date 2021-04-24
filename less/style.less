@@ -56,6 +56,8 @@ a{
 	}
 }
 
+/* Модальное окно входа */
+
 .popup {
   display: none;
   position: fixed;
@@ -120,4 +122,69 @@ a{
 .popup-header {
   font-weight: 900;
   margin-bottom: 40px;
+}
+
+
+/* Модальное окно "Наша команда" */
+
+.modal-team {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-close {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  width: 2rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  color: #ffffff;
+}
+.team-content {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 3rem 4rem;
+}
+
+
+.teammate-block p {
+  display: inline-block;
+  width: 80%;
+  font-size: 1.4rem;
+}
+.teammate-img {
+	overflow: visible;
+	text-align: left;
+  .left-img{
+  	float:left; 
+    margin: 7px 7px 7px 0;
+  }
+  a {
+  	color: rgba(0.00,255,255, 0.5);
+  }
+  img {
+  	width: 250px;
+  	height: 250px;
+  }
+}
+.our-team{
+	width: 700px;
+}
+.slick-active {
+  outline: none;
 }

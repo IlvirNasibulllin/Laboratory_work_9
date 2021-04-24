@@ -27,7 +27,7 @@
 					<a href="#">Локации</a>
 				</div>
 				<div class="col-lg-2">
-					<a href="#">Наша команда</a>
+					<a class="team" href="#">Наша команда</a>
 				</div>
 				<div class="col-lg-2">
 					<a href="#">Отзывы</a>
@@ -83,7 +83,6 @@
 </div>
 
 
-
 <!-- Модальные окна -->
 <!-- Вход -->
 <div class="popup">
@@ -103,7 +102,44 @@
 					<small>Нет аккаунта? <a href="#">Зарегестрируйтесь</a></small>
 				</form>
 			</div>
+		</div>		
+	</div>
+</div>
 
+<!-- Наша команда -->
+
+<div class="modal-team">
+	<div class="team-dialog">
+		<div class="team-content">
+			<button class="popup-close">&times;</button>
+
+			<div class="our-team">
+				<div class="container">
+
+					<div class="team-slider">
+
+						<div class="teammate-block">
+							<div class="teammate-img">
+								<p><img class="left-img" src="img/teammates/АваНаФэйсбук.jpg" alt="Насибуллин Ильвир">Это Насибуллин Ильвир. Новичок в нашей компании. Не так давно начал заниматься фронтентом. Увлекается футболом, закончил обучение в КИТ КАИ на специальности программиста. Хорошо проявляет себя и отлично вливается в компанию. Ссылки на социальные сети оставим ниже: <br>
+								<a href="https://vk.com/nasibullin7">Вконтакте</a>
+								<a href="https://www.instagram.com/nasibullin7/">Инстаграм</a>
+							</p>
+							</div>
+						</div>
+
+						<div class="teammate-block">
+							<div class="teammate-img">
+								<p><img class="left-img" src="img/teammates/X24T02OehaM.jpg" alt="Галимов Рустем">Это Галимов Рустем. Лучший работник нашей компании. Очень веселый, умный, дружелюбный и трудящийся сотрудник нашей команды. Рустем занимается фронтентом уже пару лет и получается это у него круто! Если захотите связаться с Рустемом для сотрудничества мы оставили вам снизу ссылки на его социальные сети:<br>
+								<a href="https://vk.com/rustik_gl" target="_blank">Вконтакте</a>
+								<a href="https://www.instagram.com/rustem_galimov/" target="_blank">Инстаграм</a>	
+							</p>
+							</div>
+							
+						</div>
+
+					</div>
+				</div>
+			</div>
 		</div>		
 	</div>
 </div>
@@ -111,8 +147,14 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
+<link rel="stylesheet" href="slick/slick.css">
+<link rel="stylesheet" href="slick/slick-theme.css">
+<script src="slick/slick.min.js"></script>
+<script>	
 	$(document).ready(function(){
+
+				/* Модальное окно "Вход" */
+
 	    		$('.header-entrance, .header-profile-logo').on('click', function(event){
 	    			event.preventDefault();
 	    			$('.popup').fadeIn();
@@ -122,6 +164,26 @@
 	    			$('.popup').fadeOut(); 
 	    		});
 
+	    		/* Модальное окно "Наша команда" */
+
+	    		$('.team').on('click', function(event){
+	    			event.preventDefault();
+	    			$('.modal-team').fadeIn();
+
+	    			/* Слайдер */
+
+	    			$('.team-slider').slick({
+	    		    infinite: true,
+	    		    slidesToShow: 1,
+	    		    slidesToScroll: 1,
+	    		});
+	    		});
+
+	    		$('.popup-close').on('click', function(event) {
+	    			event.preventDefault();
+	    			$('.modal-team').fadeOut(); 
+	    		});
+ 		
 	    	});
 </script>
 </body>
